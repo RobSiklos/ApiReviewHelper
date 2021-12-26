@@ -9,9 +9,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Robzilla888.ApiReviewHelper")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Robzilla888 Data Visualization Inc.")]
+[assembly: AssemblyCompany("Robzilla888")]
 [assembly: AssemblyProduct("ApiReviewHelper")]
-[assembly: AssemblyCopyright("Copyright © Robzilla888 Data Visualization Inc. 2013")]
+[assembly: AssemblyCopyright("Copyright © Rob Siklos 2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
