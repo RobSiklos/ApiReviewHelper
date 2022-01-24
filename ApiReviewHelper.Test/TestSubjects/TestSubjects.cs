@@ -227,4 +227,13 @@ namespace Robzilla888.ApiReviewHelper.ObjectModel.Test.TestSubjects
         {
         }
     }
+
+    public class PublicClassImplementingInternalInterface : IHelpTestingInternal
+    {
+        public void InterfaceMethod() => throw new NotImplementedException();
+
+        public void PublicMethodDeclaredOnInternalInterface() => throw new NotImplementedException();
+
+        public (int X, double Y) ValueTupleInterfaceMethod(Guid id, out (int A, Version Version) result) => throw new NotImplementedException();
+    }
 }

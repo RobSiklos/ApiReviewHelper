@@ -35,5 +35,19 @@ namespace Robzilla888.ApiReviewHelper.ObjectModel.Test
             string expected = "public interface IGenericConstraint<in T> where T : List<T>";
             Assert.AreEqual(expected, td.Signature);
         }
+
+        [TestMethod]
+        public void TypeSig_InternalInterfaceWhichImplementsPublicInterface()
+        {
+            // Arrange.
+            Type t = typeof(TS.PublicClassImplementingInternalInterface);
+
+            // Act.
+            TypeData td = new TypeData(t);
+
+            // Assert.
+            string expected = "public class PublicClassImplementingInternalInterface : IHelpTesting";
+            Assert.AreEqual(expected, td.Signature);
+        }
     }
 }
