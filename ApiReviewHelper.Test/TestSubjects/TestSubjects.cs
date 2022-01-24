@@ -207,6 +207,7 @@ namespace Robzilla888.ApiReviewHelper.ObjectModel.Test.TestSubjects
         }
     }
 
+    [System.Runtime.Versioning.SupportedOSPlatform("windows")]
     public class PublicClass
     {
         public class PublicNestedOfPublic
