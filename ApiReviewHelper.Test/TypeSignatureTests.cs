@@ -49,5 +49,19 @@ namespace Robzilla888.ApiReviewHelper.ObjectModel.Test
             string expected = "public class PublicClassImplementingInternalInterface : IHelpTesting";
             Assert.AreEqual(expected, td.Signature);
         }
+
+        [TestMethod]
+        public void TypeSig_ContainsSupportedOSPlatformParameter()
+        {
+            // Arrange.
+            Type t = typeof(TS.PublicClass);
+
+            // Act.
+            TypeData td = new TypeData(t);
+
+            // Assert.
+            string expected = "public class PublicClass [SupportedOSPlatform(\"windows\")]";
+            Assert.AreEqual(expected, td.Signature);
+        }
     }
 }

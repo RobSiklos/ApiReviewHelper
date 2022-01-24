@@ -72,6 +72,12 @@ namespace Robzilla888.ApiReviewHelper.ObjectModel
             {
                 attrParams = ((System.ComponentModel.EditorBrowsableState)(int)attr.ConstructorArguments[0].Value).ToString();
             }
+            else if (attrType.IsAssignableTo(typeof(System.Runtime.Versioning.OSPlatformAttribute))
+                     && attr.Constructor.GetParameters().Length == 1
+                     && attr.ConstructorArguments[0].ArgumentType.ReflectionOnlyEquals(typeof(string)))
+            {
+                attrParams = $"\"{(string)attr.ConstructorArguments[0].Value}\"";
+            }
             else
             {
                 attrParams = null;
